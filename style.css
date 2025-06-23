@@ -1,0 +1,271 @@
+:root {
+  --bg: #fefefe;
+  --soft-pink: #ffe6f0;
+  --soft-pink: #ffe6f0;
+  --soft-purple: #f3e6ff;
+  --text: #444;
+  --text-light: #666;
+  --accent: #a0d3e8;
+  --font: 'Quicksand', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--soft-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+  margin-right: 1rem;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  color: #444;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  filter: brightness(98%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem 2.5rem;
+  border-radius: 20px;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  color: #444;
+}
+
+.hero-text p {
+  color: #666;
+}
+
+
+main {
+  padding: 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.member-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.member-card {
+  background: white;
+  border-radius: 12px;
+  width: 200px;
+  box-shadow: 0 6px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
+
+.member-desc {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Saat aktif, deskripsi akan tampil */
+.member-card.active .member-desc {
+  max-height: 300px; /* sesuaikan tinggi maksimal sesuai panjang deskripsi */
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.member-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.member-card h3 {
+  margin: 0.5rem 0;
+}
+
+.member-desc {
+  display: none;
+  padding: 0 1rem 1rem;
+  font-size: 0.9rem;
+}
+
+.member-card.active .member-desc {
+  display: block;
+}
+
+.member-card: {
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.member-card:hover {
+  transform: scale(1.1); /* efek zoom */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* biar ada efek bayangan juga */
+
+ 
+  .albums-section {
+  padding: 4rem 2rem;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #333;
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  
+}
+.album-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+  
+}
+.album-item {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s ease;
+}
+
+.album-item:hover {
+  transform: scale(1.02);
+}
+
+.album-text {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 1.5rem;
+  text-align: left;
+  border-radius: 0 0 20px 20px;
+}
+
+.album-text h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.album-text p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.site-footer {
+  background-color: #fef6f9; /* very soft pink */
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  border-top: 1px solid #f4d9df;
+  color: #555;
+}
+
+.site-footer .footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-content .quote {
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #aa7e8a;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.social-links a img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(40%) brightness(0.9);
+}
+
+.social-links a img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
+
+.footer-content .copyright {
+  font-size: 0.85rem;
+  color: #888;
+}
